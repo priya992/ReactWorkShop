@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 A step by step series to get a development env running
 
 ```
-1. git clone {{repo name}}
+1. git clone {{repo name}} / Download code
 2. cd ReactWorkShop
 3. npm install
 4. npm run start
@@ -26,7 +26,7 @@ The test cases in the application uses the snapshot testing of Jest.
 Run test cases using the below command on terminal
 
 ```
-1. yarn run test
+1. npm run test
 
 ```
 
