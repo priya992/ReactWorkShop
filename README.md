@@ -1,7 +1,5 @@
 
-# ReactBoilerPlate
-
-Application that can be used as a setup project for server side rendering
+# ReactWokShop
 
 ## Getting Started
 
@@ -13,7 +11,7 @@ A step by step series to get a development env running
 
 ```
 1. git clone {{repo name}}
-2. cd ReactBoilerPlate
+2. cd ReactWokShop
 3. npm install
 4. npm run start
 5. npm run start:dev (to run on watch mode - hot reloading)
