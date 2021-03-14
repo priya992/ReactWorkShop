@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component 1`] = `
+Array [
+  <img
+    alt="test"
+    className="image-style"
+    onError={[Function]}
+    src="media/undefined"
+  />,
+  <div
+    className="card-text"
+  />,
+]
+`;

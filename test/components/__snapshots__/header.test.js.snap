@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component 1`] = `
+<div
+  className="header-container"
+>
+  <div
+    className="header-sub"
+  >
+    <img
+      alt="back-btn"
+      src="media/Back.png"
+    />
+    <div
+      className="header-text"
+    >
+      Romantic Comedy
+    </div>
+  </div>
+  <img
+    alt="search"
+    onClick={[Function]}
+    src="media/search.png"
+  />
+</div>
+`;

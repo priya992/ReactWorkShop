@@ -1,0 +1,51 @@
+{
+  "name": "react-work-shop",
+  "version": "1.1.0",
+  "description": "React WorkShop!",
+  "main": "index.js",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
+      "\\.(s?css|less)$": "identity-obj-proxy"
+    }
+  },
+  "scripts": {
+    "start": "yarn build && node index.js",
+    "build": "webpack --config webpack.config.js",
+    "start:dev": "webpack --watch",
+    "test": "jest"
+  },
+  "author": "Priya",
+  "dependencies": {
+    "@babel/register": "^7.8.6",
+    "@loadable/component": "^5.14.1",
+    "express": "^4.17.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "tailwindcss": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "jest": "^23.4.2",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.14.1",
+    "react-test-renderer": "^16.0.0-alpha.12",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
