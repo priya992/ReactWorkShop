@@ -5,18 +5,18 @@ export default function template(title, initialState = {}, content = "") {
     scripts = ` <script>
                    window.__STATE__ = ${JSON.stringify(initialState)}
                 </script>
-                <script src="assets/client.js"></script>
+                <script src="build/client.js"></script>
                 `
   } else {
-    scripts = ` <script src="assets/bundle.js"> </script> `
+    scripts = ` <script src="build/bundle.js"> </script> `
   }
   let page = `<!DOCTYPE html>
               <html lang="en">
               <head>
                 <meta charset="utf-8">
                 <title> ${title} </title>
-                <link rel="stylesheet" href="assets/style.css">
-                <link rel="stylesheet" href="assets/styles.css">
+                <link rel="stylesheet" href="build/style.css">
+                <link rel="stylesheet" href="build/styles.css">
               </head>
               <body>
                 <div class="content">

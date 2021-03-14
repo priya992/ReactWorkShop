@@ -2,12 +2,12 @@ import express from 'express'
 import path from 'path'
 import template from './src/template'
 import ssr from './server'
-import data from './assets/api/CONTENTLISTINGPAGE-PAGE1.json'
+import data from './build/api/CONTENTLISTINGPAGE-PAGE1.json'
 
 const app = express()
 
 // Serving static files
-app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
+app.use('/build', express.static(path.resolve(__dirname, 'build')));
 app.use('/media', express.static(path.resolve(__dirname, 'media')));
 
 // hide powered by express
@@ -29,13 +29,13 @@ let initialState = {
 app.get('/', (req, res) => {
   const { preloadedState, content}  = ssr(initialState)
   const response = template("Server Rendered Page", preloadedState, content)
-  res.setHeader('Cache-Control', 'assets, max-age=604800')
+  res.setHeader('Cache-Control', 'build, max-age=604800')
   res.send(response);
 });
 
 // Pure client side rendered page
 app.get('/client', (req, res) => {
   let response = template('Client Side Rendered page')
-  res.setHeader('Cache-Control', 'assets, max-age=604800')
+  res.setHeader('Cache-Control', 'build, max-age=604800')
   res.send(response)
 });

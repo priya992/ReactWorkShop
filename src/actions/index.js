@@ -20,7 +20,7 @@ function receiveApps(json) {
 function fetchApps() {
   return dispatch => {
     dispatch(requestApps())
-    return fetch(`assets/api/CONTENTLISTINGPAGE-PAGE1.json`)
+    return fetch(`build/api/CONTENTLISTINGPAGE-PAGE1.json`)
       .then(response => response.json())
       .then(json => dispatch(receiveApps(json)))
   }
@@ -54,7 +54,7 @@ function receivePagination(json, page) {
 export function fetchPagination(page=2) {
   return dispatch => {
     dispatch(requestApps())
-    return fetch(`assets/api/CONTENTLISTINGPAGE-PAGE${page}.json`)
+    return fetch(`build/api/CONTENTLISTINGPAGE-PAGE${page}.json`)
       .then(response => response.json())
       .then(json => dispatch(receivePagination(json, page)))
   }

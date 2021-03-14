@@ -10,12 +10,12 @@ module.exports = {
     bundle: './src/bundle.js'
   },
   output: {
-    path: path.resolve(__dirname, 'assets/'),
+    path: path.resolve(__dirname, 'build/'),
     filename: "[name].js",
-    publicPath: './assets/',
+    publicPath: './build/',
   },
   devServer: {
-    contentBase: 'assets',
+    contentBase: 'build',
     watchContentBase: true,
     compress: true,
     hot: true,
