@@ -1,5 +1,5 @@
 
-# ReactWokShop
+# ReactWorkShop
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ A step by step series to get a development env running
 
 ```
 1. git clone {{repo name}}
-2. cd ReactWokShop
+2. cd ReactWorkShop
 3. npm install
 4. npm run start
 5. npm run start:dev (to run on watch mode - hot reloading)
