@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "React WorkShop!",
   "main": "index.js",
-  "homepage": "http://priya992.github.io/react-work-shop",
+  "homepage": "http://priya992.github.io/ReactWorkShop/",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
