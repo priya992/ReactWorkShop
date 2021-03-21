@@ -11,8 +11,8 @@
     }
   },
   "scripts": {
-    "start": "yarn build && node index.js",
     "build": "webpack --config webpack.config.js",
+    "start": "npm run build && node index.js",
     "start:dev": "webpack --watch",
     "test": "jest",
     "predeploy": "npm run build",
@@ -41,6 +41,7 @@
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^4.5.2",
     "jest": "^23.4.2",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.14.1",

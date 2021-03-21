@@ -1,4 +1,5 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
@@ -10,9 +11,9 @@ module.exports = {
     bundle: './src/bundle.js'
   },
   output: {
-    path: path.resolve(__dirname, 'build/'),
+    path: path.resolve(__dirname, 'build'),
     filename: "[name].js",
-    publicPath: './build/',
+    chunkFilename: './build/[name]-chunk.js',
   },
   devServer: {
     contentBase: 'build',
@@ -46,9 +47,13 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss']
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      filename: './index.html',
+      template: __dirname + '/index.html',
+    }),
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
-      chunkFilename:'styles.css'
+      filename: 'style.css',
+      chunkFilename:'style.css'
     })
   ]
 }
