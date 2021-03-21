@@ -14,6 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: "[name].js",
     chunkFilename: './build/[name]-chunk.js',
+    publicPath: '/build/'
   },
   devServer: {
     contentBase: 'build',
@@ -40,7 +41,17 @@ module.exports = {
       {
         test: /\.(otf|png|jpg|jpeg|gif|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader?limit=10000',
-      }
+      },
+      {
+      	test: /\.json$/,
+      	loader: 'file-loader',
+      	type: 'javascript/auto',
+        options: {
+          name() {
+            return '/api/[name].json';
+          },
+        },
+      },
     ]
   },
   resolve: {
