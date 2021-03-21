@@ -32998,7 +32998,7 @@ function disableSearchHandler() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "api/CONTENTLISTINGPAGE-PAGE1.json";
+module.exports = __webpack_require__.p + "build/api/CONTENTLISTINGPAGE-PAGE1.json";
 
 /***/ }),
 
@@ -33009,7 +33009,7 @@ module.exports = __webpack_require__.p + "api/CONTENTLISTINGPAGE-PAGE1.json";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "api/CONTENTLISTINGPAGE-PAGE2.json";
+module.exports = __webpack_require__.p + "build/api/CONTENTLISTINGPAGE-PAGE2.json";
 
 /***/ }),
 
@@ -33020,7 +33020,7 @@ module.exports = __webpack_require__.p + "api/CONTENTLISTINGPAGE-PAGE2.json";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "api/CONTENTLISTINGPAGE-PAGE3.json";
+module.exports = __webpack_require__.p + "build/api/CONTENTLISTINGPAGE-PAGE3.json";
 
 /***/ }),
 
