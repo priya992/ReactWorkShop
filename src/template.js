@@ -16,15 +16,11 @@ export default function template(title, initialState = {}, content = "") {
                 <meta charset="utf-8">
                 <title> ${title} </title>
                 <link rel="stylesheet" href="build/style.css">
-                <link rel="stylesheet" href="build/styles.css">
               </head>
               <body>
                 <div class="content">
-                   <div id="app" class="wrap-inner">
-                      ${content}
-                   </div>
+                   <div id="app" class="wrap-inner">${content}</div>
                 </div>
-
                   ${scripts}
               </body>
               `;

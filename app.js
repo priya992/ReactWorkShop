@@ -2,7 +2,7 @@ import express from 'express'
 import path from 'path'
 import template from './src/template'
 import ssr from './server'
-import data from './build/api/CONTENTLISTINGPAGE-PAGE1.json'
+import data from './src/api/CONTENTLISTINGPAGE-PAGE1.json'
 
 const app = express()
 

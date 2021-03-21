@@ -57,7 +57,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"home-footer":"home-footer"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "./build/" + ({"home-footer":"home-footer"}[chunkId]||chunkId) + "-chunk.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -196,7 +196,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "./build/";
+/******/ 	__webpack_require__.p = "/build/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -32893,11 +32893,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPagination", function() { return fetchPagination; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSearchHandler", function() { return fetchSearchHandler; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableSearchHandler", function() { return disableSearchHandler; });
+/* harmony import */ var _api_CONTENTLISTINGPAGE_PAGE1_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api/CONTENTLISTINGPAGE-PAGE1.json */ "./src/api/CONTENTLISTINGPAGE-PAGE1.json");
+/* harmony import */ var _api_CONTENTLISTINGPAGE_PAGE1_json__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_api_CONTENTLISTINGPAGE_PAGE1_json__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _api_CONTENTLISTINGPAGE_PAGE2_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api/CONTENTLISTINGPAGE-PAGE2.json */ "./src/api/CONTENTLISTINGPAGE-PAGE2.json");
+/* harmony import */ var _api_CONTENTLISTINGPAGE_PAGE2_json__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_api_CONTENTLISTINGPAGE_PAGE2_json__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _api_CONTENTLISTINGPAGE_PAGE3_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api/CONTENTLISTINGPAGE-PAGE3.json */ "./src/api/CONTENTLISTINGPAGE-PAGE3.json");
+/* harmony import */ var _api_CONTENTLISTINGPAGE_PAGE3_json__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_api_CONTENTLISTINGPAGE_PAGE3_json__WEBPACK_IMPORTED_MODULE_2__);
 var REQUEST_APPS = 'REQUEST_APPS';
 var RECEIVE_APPS = 'RECEIVE_APPS';
 var PAGINATION_DATA = 'PAGINATION_DATA';
 var RECEIVE_SEARCH = 'RECEIVE_SEARCH';
 var DISABLE_SEARCH = 'DISABLE_SEARCH';
+
+
+
 
 function requestApps() {
   return {
@@ -32915,7 +32924,7 @@ function receiveApps(json) {
 function fetchApps() {
   return function (dispatch) {
     dispatch(requestApps());
-    return fetch("build/api/CONTENTLISTINGPAGE-PAGE1.json").then(function (response) {
+    return fetch(_api_CONTENTLISTINGPAGE_PAGE1_json__WEBPACK_IMPORTED_MODULE_0___default.a).then(function (response) {
       return response.json();
     }).then(function (json) {
       return dispatch(receiveApps(json));
@@ -32955,7 +32964,13 @@ function fetchPagination() {
   var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
   return function (dispatch) {
     dispatch(requestApps());
-    return fetch("build/api/CONTENTLISTINGPAGE-PAGE".concat(page, ".json")).then(function (response) {
+    var data = _api_CONTENTLISTINGPAGE_PAGE2_json__WEBPACK_IMPORTED_MODULE_1___default.a;
+
+    if (page === 3) {
+      data = _api_CONTENTLISTINGPAGE_PAGE3_json__WEBPACK_IMPORTED_MODULE_2___default.a;
+    }
+
+    return fetch(data).then(function (response) {
       return response.json();
     }).then(function (json) {
       return dispatch(receivePagination(json, page));
@@ -32973,6 +32988,39 @@ function disableSearchHandler() {
     type: DISABLE_SEARCH
   };
 }
+
+/***/ }),
+
+/***/ "./src/api/CONTENTLISTINGPAGE-PAGE1.json":
+/*!***********************************************!*\
+  !*** ./src/api/CONTENTLISTINGPAGE-PAGE1.json ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "build/api/CONTENTLISTINGPAGE-PAGE1.json";
+
+/***/ }),
+
+/***/ "./src/api/CONTENTLISTINGPAGE-PAGE2.json":
+/*!***********************************************!*\
+  !*** ./src/api/CONTENTLISTINGPAGE-PAGE2.json ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "build/api/CONTENTLISTINGPAGE-PAGE2.json";
+
+/***/ }),
+
+/***/ "./src/api/CONTENTLISTINGPAGE-PAGE3.json":
+/*!***********************************************!*\
+  !*** ./src/api/CONTENTLISTINGPAGE-PAGE3.json ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "build/api/CONTENTLISTINGPAGE-PAGE3.json";
 
 /***/ }),
 

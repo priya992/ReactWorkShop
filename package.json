@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "React WorkShop!",
   "main": "index.js",
-  "homepage": "http://priya992.github.io/ReactWorkShop/",
+  "homepage": "http://priya992.github.io/ReactWorkShop",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
@@ -11,8 +11,8 @@
     }
   },
   "scripts": {
-    "start": "yarn build && node index.js",
     "build": "webpack --config webpack.config.js",
+    "start": "npm run build && node index.js",
     "start:dev": "webpack --watch",
     "test": "jest",
     "predeploy": "npm run build",
@@ -23,6 +23,7 @@
     "@babel/register": "^7.8.6",
     "@loadable/component": "^5.14.1",
     "express": "^4.17.1",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
@@ -41,6 +42,7 @@
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^4.5.2",
     "jest": "^23.4.2",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.14.1",

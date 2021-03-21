@@ -4,6 +4,10 @@ export const PAGINATION_DATA = 'PAGINATION_DATA'
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH'
 export const DISABLE_SEARCH = 'DISABLE_SEARCH'
 
+import contentPage1 from '../api/CONTENTLISTINGPAGE-PAGE1.json';
+import contentPage2 from '../api/CONTENTLISTINGPAGE-PAGE2.json';
+import contentPage3 from '../api/CONTENTLISTINGPAGE-PAGE3.json';
+
 function requestApps() {
   return {
     type: REQUEST_APPS
@@ -20,7 +24,7 @@ function receiveApps(json) {
 function fetchApps() {
   return dispatch => {
     dispatch(requestApps())
-    return fetch(`build/api/CONTENTLISTINGPAGE-PAGE1.json`)
+    return fetch(contentPage1)
       .then(response => response.json())
       .then(json => dispatch(receiveApps(json)))
   }
@@ -54,7 +58,11 @@ function receivePagination(json, page) {
 export function fetchPagination(page=2) {
   return dispatch => {
     dispatch(requestApps())
-    return fetch(`build/api/CONTENTLISTINGPAGE-PAGE${page}.json`)
+    let data = contentPage2
+    if(page === 3) {
+      data = contentPage3
+    }
+    return fetch(data)
       .then(response => response.json())
       .then(json => dispatch(receivePagination(json, page)))
   }
