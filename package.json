@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "React WorkShop!",
   "main": "index.js",
-  "homepage": "http://priya992.github.io/ReactWorkShop/",
+  "homepage": "http://priya992.github.io/ReactWorkShop",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
@@ -23,6 +23,7 @@
     "@babel/register": "^7.8.6",
     "@loadable/component": "^5.14.1",
     "express": "^4.17.1",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
