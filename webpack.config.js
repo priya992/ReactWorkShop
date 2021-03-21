@@ -48,7 +48,7 @@ module.exports = {
       	type: 'javascript/auto',
         options: {
           name() {
-            return '/api/[name].json';
+            return 'api/[name].json';
           },
         },
       },
